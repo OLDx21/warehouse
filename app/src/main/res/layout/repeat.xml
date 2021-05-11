@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/updatetovar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="58dp"
+            android:layout_width="match_parent"
+            android:theme="@style/Theme.NewPr.AppBarOverlay">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+        >
+            <Button
+                    android:id="@+id/backupd"
+                    android:background="@color/teal_700"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/abc_vector_test">
+
+            </Button>
+            <TextView
+                    android:layout_centerHorizontal="true"
+
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="?actionBarSize"
+                    android:padding="@dimen/appbar_padding"
+                    android:text="Обновление рецепта"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+
+            <Button
+                    android:id="@+id/saveupdate"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/teal_700"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:foreground="@android:drawable/ic_menu_save">
+
+            </Button>
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="40dp"
+    >
+
+        <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                android:textColor="#000000"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toLeftOf="@id/tvText"
+                android:background="#1E1B1B"
+        />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@id/tvText"
+                android:background="#1E1B1B"
+        />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
