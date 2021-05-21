@@ -83,7 +83,7 @@ public PlaceholderFragment (Context context){
         Display display = getActivity().getWindowManager().getDefaultDisplay();
         int widght = display.getWidth()/4;
 
-      ScrollView scrollView =  Methods.artbuttons(sqLiteDatabase, context, widght);
+      ScrollView scrollView =  Methods.artbuttons(sqLiteDatabase, getContext(), widght);
 
 
       constraintLayout.clearAnimation();

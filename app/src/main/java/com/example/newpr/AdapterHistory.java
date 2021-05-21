@@ -27,7 +27,7 @@ public class AdapterHistory extends ArrayAdapter<HistoryClas> {
     static class FruitViewHolder {
         TextView fruitImg;
         TextView fruitName;
-        Button calories;
+        ImageButton calories;
     }
 
     static void put(ArrayList<INfo> arrayList2) {
@@ -69,7 +69,7 @@ public class AdapterHistory extends ArrayAdapter<HistoryClas> {
             viewHolder = new FruitViewHolder();
             viewHolder.fruitImg = (TextView) row.findViewById(R.id.NAmeZ);
             viewHolder.fruitName = (TextView) row.findViewById(R.id.Time);
-            viewHolder.calories = (Button) row.findViewById(R.id.btnotmena);
+            viewHolder.calories = (ImageButton) row.findViewById(R.id.btnotmena);
 
 
             row.setTag(viewHolder);

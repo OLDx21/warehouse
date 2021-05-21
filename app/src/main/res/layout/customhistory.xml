@@ -8,10 +8,9 @@
                 android:id="@+id/relative2"
                 android:clickable="true"
                 android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:background="?android:selectableItemBackground"
 >
-
 
 
     <TextView
@@ -24,7 +23,7 @@
             android:paddingRight="10dp"
             android:paddingTop="10dp"
             android:paddingLeft="10dp"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"/>
 
     <TextView
             android:layout_centerHorizontal="true"
@@ -35,20 +34,23 @@
 
             android:layout_centerVertical="true"
             android:paddingTop="10dp"
-           />
+    />
 
-    <Button
-            android:textSize="20dp"
+    <ImageButton
+            android:layout_marginHorizontal="3dp"
+
             android:id="@+id/btnotmena"
-            android:layout_width="49dp"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
 
-            android:foreground="@android:drawable/ic_menu_close_clear_cancel"
-            app:backgroundTint="#F44336">
 
-    </Button>
+            android:foreground="@android:drawable/ic_menu_delete"
+            android:foregroundTint="@color/black"
+            app:backgroundTint="@color/design_default_color_background"
+            app:iconTint="@color/material_on_surface_emphasis_high_type">
+
+    </ImageButton>
+
 </RelativeLayout>

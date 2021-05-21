@@ -151,7 +151,6 @@ public class Methods {
             Button button = new Button(context);
             button.setHeight(widght);
             button.setWidth(widght);
-
             button.setText(Methods.infoTovars.get(i).getNam());
 
             buttonArrayList.add(button);

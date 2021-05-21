@@ -4,7 +4,7 @@
 
     <item
 
-            android:id="@+id/menu_publish"
+            android:id="@+id/saverbtn"
             android:title="Назад"
             app:showAsAction="always"
             android:icon="@android:drawable/ic_menu_save"/>

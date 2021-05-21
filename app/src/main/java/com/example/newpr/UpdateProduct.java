@@ -11,15 +11,19 @@ import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class UpdateProduct extends Activity {
+public class UpdateProduct extends AppCompatActivity {
     public static void setName(String name) {
         UpdateProduct.name = name;
     }
@@ -28,23 +32,48 @@ TextView textView;
     com.example.newpr.dbhelp dbhelp;
     SQLiteDatabase sqLiteDatabase;
     Button save;
-    Button back;
 
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(UpdateProduct.this, MainActivity.class);
         startActivity(intent);
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar2, menu);
+        return true;
+    }
+    @SuppressLint("NonConstantResourceId")
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            case R.id.savebtn2:
+              save.performClick();
+
+                break;
+
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.repeat);
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        setTitle("Обновление рецепта");
+
         textView = findViewById(R.id.tvText);
         textView.setText(name);
-        save = findViewById(R.id.saveupdate);
-        back = findViewById(R.id.backupd);
+        save = new Button(this);
+        save.setVisibility(-1);
         @SuppressLint("ResourceType") LinearLayout constraintLayout = (LinearLayout) findViewById(R.id.updatetovar);
         Display display = getWindowManager().getDefaultDisplay();
         int widght = display.getWidth();
@@ -90,7 +119,7 @@ TextView textView;
 
 
         }
-
+        layout.addView(save);
         scrollView.addView(layout);
         constraintLayout.addView(scrollView);
 
@@ -131,13 +160,7 @@ TextView textView;
 
             }
         });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UpdateProduct.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 
